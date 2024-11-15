@@ -4,6 +4,10 @@ import React, { useState } from "react";
 const About = () => {
   const [activeCard, setActiveCard] = useState(2); // Start with the middle card
 
+  const handleCardClick = (cardNumber: number) => {
+    setActiveCard(cardNumber);
+  };
+
   return (
     <div className="max-w-[1200px] mx-auto" id="about">
       <h1 className="text-white text-6xl max-w-[320px] mx-auto font-semibold p-4 mb-8">
@@ -15,8 +19,11 @@ const About = () => {
         <div className="flex space-x-4">
           {/* Card 1 */}
           <div
-            className={`w-full lg:w-[30%] relative bg-[#c1dcee]/20 backdrop-blur-lg border border-white/30 rounded-xl overflow-hidden transition-opacity duration-300 ${
-              activeCard === 1 ? "opacity-100" : "opacity-55"  // Reduced opacity for better readability
+            role="button"
+            tabIndex={0}
+            onClick={() => handleCardClick(1)}
+            className={`w-full lg:w-[30%] relative bg-[#c1dcee]/20 backdrop-blur-lg border border-white/30 rounded-xl overflow-hidden transition-opacity duration-300 cursor-pointer ${
+              activeCard === 1 ? "opacity-100" : "opacity-55"
             }`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#fec3e1] via-[#323776] to-[#5369b1] opacity-20 animate-gradient-xy"></div>
@@ -30,7 +37,10 @@ const About = () => {
 
           {/* Card 2 (Middle card, always clear) */}
           <div
-            className={`w-full lg:w-[30%] relative bg-[#c1dcee]/20 backdrop-blur-lg border border-white/30 rounded-xl overflow-hidden transition-opacity duration-300 ${
+            role="button"
+            tabIndex={0}
+            onClick={() => handleCardClick(2)}
+            className={`w-full lg:w-[30%] relative bg-[#c1dcee]/20 backdrop-blur-lg border border-white/30 rounded-xl overflow-hidden transition-opacity duration-300 cursor-pointer ${
               activeCard === 2 ? "opacity-100" : "opacity-40"
             }`}
           >
@@ -45,8 +55,11 @@ const About = () => {
 
           {/* Card 3 */}
           <div
-            className={`w-full lg:w-[30%] relative bg-[#c1dcee]/20 backdrop-blur-lg border border-white/30 rounded-xl overflow-hidden transition-opacity duration-300 ${
-              activeCard === 3 ? "opacity-100" : "opacity-55"  // Reduced opacity for better readability
+            role="button"
+            tabIndex={0}
+            onClick={() => handleCardClick(3)}
+            className={`w-full lg:w-[30%] relative bg-[#c1dcee]/20 backdrop-blur-lg border border-white/30 rounded-xl overflow-hidden transition-opacity duration-300 cursor-pointer ${
+              activeCard === 3 ? "opacity-100" : "opacity-50"
             }`}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#fec3e1] via-[#323776] to-[#5369b1] opacity-20 animate-gradient-xy"></div>

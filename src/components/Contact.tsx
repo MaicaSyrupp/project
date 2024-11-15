@@ -25,7 +25,7 @@ const Contact = () => {
 
         {/* Contact Form */}
         <div className='bg-[#8182ac]/60 p-6 rounded-xl w-full max-w-[550px]'>
-            <h2 className='text-3xl lg:text-5xl font-bold text-[#fec3e1] mb-4'>Let's Connect</h2> {/* Light pink color */}
+            <h2 className='text-3xl lg:text-5xl font-bold text-[#fec3e1] mb-4'>Let us Connect</h2> {/* Light pink color */}
             <form className='space-y-4' action="https://getform.io/f/bjjjoleb" method="POST">
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                     <input 
