@@ -16,6 +16,7 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #fdfcfc;  /* Fallback for the light theme */
   font-family: Arial, Helvetica, sans-serif;
+  background: #323776; /* Solid dark purple background */
 }
